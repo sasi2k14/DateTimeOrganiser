@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 public class MainForm extends javax.swing.JFrame {
 
     /**
-     * Creates new form Main
+     * Creates new form core.Main
      */
     public MainForm() {
         initComponents();

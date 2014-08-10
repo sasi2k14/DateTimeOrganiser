@@ -1,8 +1,9 @@
-/*
+package core;/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 
+import gui.UIController;
 import metatagorganiser.core.MetaTagOrganiser;
 import metatagorganiser.core.MetaTagOrganiserModel;
 import metatagorganiser.gui.UIController;
