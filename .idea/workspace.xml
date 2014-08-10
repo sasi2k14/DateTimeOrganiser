@@ -447,7 +447,11 @@
       <created>1407669203285</created>
       <updated>1407669203285</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Commit after test cases/junit">
+      <created>1407669229017</created>
+      <updated>1407669229017</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
