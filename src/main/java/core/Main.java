@@ -4,9 +4,6 @@ package core;/*
  */
 
 import gui.UIController;
-import metatagorganiser.core.MetaTagOrganiser;
-import metatagorganiser.core.MetaTagOrganiserModel;
-import metatagorganiser.gui.UIController;
 
 /**
  *

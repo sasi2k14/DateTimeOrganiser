@@ -20,36 +20,18 @@ import static org.junit.Assert.*;
  * @author shobana sasi
  */
 public class SingleFileTestWithDestinationDir {
-    
-    private String srcTestFileName = "file1.jpg";
-    private String destFolder = TestResourceHelper.getfResourceFolder().getAbsolutePath() +
+
+    private static final TestUtils TU = TestUtils.getInstance();
+
+    private String srcTestFileName = "file1.jpg.bak";
+    private String destFolder = TU.getResourceFolder().getAbsolutePath() +
                                 File.separator +
                                 "output";
         
     @Before
     public void setUp() throws IOException {
-//        String resDir = "." + File.separator +
-//                        "res" + File.separator +
-//                        "test";
-//
-//        testFileDirPathName = resDir + File.separator +
-//                                     testFileDir;
-//
-//        String path = testFileDirPathName + File.separator +
-//                      srcTestFileName;
-//
-//        srcTestFile = new File(path);
-//
-//        if(!srcTestFile.exists()) {
-//            throw new IllegalArgumentException("Unable to locate the test file");
-//        }
-//
-//        srcTestFilePathName = path;
-//        destTestDir = resDir + File.separator + "single-file-test-w-dest";
-
-        TestResourceHelper.setupResourceDir();
-        TestResourceHelper.checkFilesExistInResourceFolder(srcTestFileName);
-        TestResourceHelper.restoreBackupFiles(srcTestFileName);
+        TU.checkFilesExistInResourceFolder(srcTestFileName);
+        TU.restoreBackupFiles(srcTestFileName);
     }
     
     @Test

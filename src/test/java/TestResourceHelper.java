@@ -27,9 +27,9 @@ public class TestResourceHelper {
      * Setup Resource directory for all test cases to be run
      */
     public static void setupResourceDir() {
-        sResourceDir = "." + File.separator +
-                       "test" + File.separator +
-                       "res" + File.separator;
+        sResourceDir = "."      + File.separator +
+                       "test"   + File.separator +
+                       "res"    + File.separator;
 
         fResourceFolder = new File(sResourceDir);
         if(fResourceFolder.exists() == false) {
