@@ -4,14 +4,14 @@
  */
 package gui;
 
+import core.MetaTagOrganiser;
+import gui.panels.Form1;
+import gui.panels.Form2;
+import gui.panels.MainForm;
+
+import javax.swing.*;
 import java.io.File;
 import java.util.List;
-import javax.swing.JFileChooser;
-import javax.swing.JPanel;
-import metatagorganiser.core.MetaTagOrganiser;
-import metatagorganiser.gui.panels.Form1;
-import metatagorganiser.gui.panels.Form2;
-import metatagorganiser.gui.panels.MainForm;
 
 /**
  *

@@ -4,8 +4,9 @@
  */
 package gui.panels;
 
+import gui.UIController;
+
 import javax.swing.JLabel;
-import metatagorganiser.gui.UIController;
 
 /**
  *

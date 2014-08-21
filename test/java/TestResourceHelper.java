@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FilenameFilter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,21 +13,25 @@ import java.util.List;
  */
 public class TestResourceHelper {
 
-    public static String sResourceDir;
-    public static File fResourceFolder;
+    private String sResourceDir;
+    private File fResourceFolder;
 
-    public static File getfResourceFolder() {
+    public TestResourceHelper() {
+        setupResourceDir();
+    }
+
+    public  File getfResourceFolder() {
         return fResourceFolder;
     }
 
-    public static void setfResourceFolder(File fResourceFolder) {
-        TestResourceHelper.fResourceFolder = fResourceFolder;
+    public void setfResourceFolder(File fResourceFolder) {
+        fResourceFolder = fResourceFolder;
     }
 
     /**
      * Setup Resource directory for all test cases to be run
      */
-    public static void setupResourceDir() {
+    public  void setupResourceDir() {
         sResourceDir = "." + File.separator +
                        "test" + File.separator +
                        "res" + File.separator;
@@ -37,8 +42,9 @@ public class TestResourceHelper {
         }
     }
 
-    public static void checkFilesExistInResourceFolder(String ... file) throws FileNotFoundException{
-        final List<String> srcFile = Arrays.asList(file);
+    public void checkFilesExistInResourceFolder(String ... file) throws FileNotFoundException{
+        final List<String> srcFile = new ArrayList<>();
+        srcFile.addAll(Arrays.asList(file));
 
         File[] files = getfResourceFolder().listFiles(new FilenameFilter() {
             @Override
@@ -58,7 +64,7 @@ public class TestResourceHelper {
         }
     }
 
-    public static void restoreBackupFiles(String... allFileName) throws IOException {
+    public  void restoreBackupFiles(String... allFileName) throws IOException {
         final List<String> fileNames = Arrays.asList(allFileName);
 
         for(String fileName : fileNames) {

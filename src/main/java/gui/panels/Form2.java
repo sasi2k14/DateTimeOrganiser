@@ -4,7 +4,8 @@
  */
 package gui.panels;
 
-import metatagorganiser.gui.UIController;
+
+import gui.UIController;
 
 /**
  *
