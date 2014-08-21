@@ -21,24 +21,17 @@ import static org.junit.Assert.*;
  */
 public class SingleFileTestWithDestinationDir {
 
-    private TestResourceHelper testResourceHelper;
+    private static final TestUtils TU = TestUtils.getInstance();
 
     private String srcTestFileName = "file1.jpg.bak";
-    private String destFolder;
+    private String destFolder = TU.getResourceFolder().getAbsolutePath() +
+                                File.separator +
+                                "output";
         
     @Before
     public void setUp() throws IOException {
-        testResourceHelper = new TestResourceHelper();
-        testResourceHelper.setupResourceDir();
-        testResourceHelper.checkFilesExistInResourceFolder(srcTestFileName);
-        testResourceHelper.restoreBackupFiles(srcTestFileName);
-
-        destFolder = testResourceHelper.getfResourceFolder().getAbsolutePath() +
-                     File.separator +
-                     "output";
-        srcTestFileName = testResourceHelper.getfResourceFolder().getAbsolutePath() +
-                          File.separator +
-                          srcTestFileName;
+        TU.checkFilesExistInResourceFolder(srcTestFileName);
+        TU.restoreBackupFiles(srcTestFileName);
     }
     
     @Test
